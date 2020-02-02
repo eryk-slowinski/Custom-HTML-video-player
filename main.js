@@ -33,17 +33,14 @@ const handleFullScreen = () => {
     }
 }
 
-
 const togglePlay = () => (video.paused) ? video.play() : video.pause();
 const handleDuration = () => video.currentTime = video.duration * (duration.value / 100);
 
 playPauseBtn.addEventListener('click', togglePlay);
 stopBtn.addEventListener('click', videoStop);
-
 video.addEventListener('click', togglePlay);
 video.addEventListener('timeupdate', render);
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('pause', updatePlayIcon);
-
 duration.addEventListener('change', handleDuration)
 fullscreenBtn.addEventListener('click', handleFullScreen);
