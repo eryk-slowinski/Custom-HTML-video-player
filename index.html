@@ -6,13 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95ed1b881a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Custom HTML video player</title>
 </head>
 
 <body>
-
-
+    <div class="wrap">
+        <h1>Custom video player</h1>
+        <video src="vid/bunny.mp4" class="vid" poster="img/poster.png"></video>
+        <div class="controls">
+            <button class="play"><i class="fas fa-play fa-2x"></i></button>
+            <button class="stop"><i class="fas fa-stop fa-2x"></i></button>
+            <input type="range" class="duration" value="0" min="0" max="100" step="0.1">
+            <p class="time">00:00</p>
+            <button class="fullscreen"><i class="fas fa-compress fa-2x"></i></button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 
