@@ -26,10 +26,8 @@ const updatePlayIcon = () => {
 const handleFullScreen = () => {
     if (!document.fullscreenElement) {
         video.requestFullscreen();
-        fullscreenBtn.innerHTML = '<i class="fas fa-compress-arrows-alt fa-2x"></i>';
     } else {
         document.exitFullscreen();
-        fullscreenBtn.innerHTML = '<i class="fas fa-compress fa-2x"></i>';
     }
 }
 
