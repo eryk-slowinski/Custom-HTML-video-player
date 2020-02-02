@@ -23,9 +23,19 @@ const updatePlayIcon = () => {
     else playPauseBtn.innerHTML = '<i class="fas fa-pause fa-2x"></i>';
 }
 
+const handleFullScreen = () => {
+    if (!document.fullscreenElement) {
+        video.requestFullscreen();
+        fullscreenBtn.innerHTML = '<i class="fas fa-compress-arrows-alt fa-2x"></i>';
+    } else {
+        document.exitFullscreen();
+        fullscreenBtn.innerHTML = '<i class="fas fa-compress fa-2x"></i>';
+    }
+}
+
+
 const togglePlay = () => (video.paused) ? video.play() : video.pause();
 const handleDuration = () => video.currentTime = video.duration * (duration.value / 100);
-const handleFullScreen = () => (!document.fullscreenElement) ? video.requestFullscreen() : document.exitFullscreen();
 
 playPauseBtn.addEventListener('click', togglePlay);
 stopBtn.addEventListener('click', videoStop);
