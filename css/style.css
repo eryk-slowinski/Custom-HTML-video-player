@@ -45,8 +45,11 @@ button {
     border: none;
     margin: 0 5px;
     background: transparent;
-    outline: none;
     cursor: pointer;
+}
+
+button:focus {
+    outline: none;
 }
 
 .fa-play {
